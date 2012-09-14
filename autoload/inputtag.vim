@@ -3,7 +3,7 @@
 " Maintainer:	Keiji Kobayashi <keiji@seeknetusa.com>
 " License:	This file is placed in the public domain.
 
-function! inputtag#Inputtag(first,last) range
+function! inputtag#InputTag(first,last) range
   let d = exists('g:inputtag_delimiter') ? g:inputtag_delimiter : '\t'
   let s:abbr = 'disabled,autofocus,readonly,required,async'
 

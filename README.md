@@ -32,7 +32,7 @@ First line must be a header. each fields of first line become to attributes.
 
 then enter
 
-    :Inputtag
+    :InputTag
 
 to change lines to
 

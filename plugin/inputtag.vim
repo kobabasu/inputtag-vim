@@ -3,4 +3,4 @@ if exists('g:loaded_inputtag')
 endif
 let g:loaded_inputtag = 1
 
-command! -nargs=? -range=% Inputtag :call inputtag#Inputtag(<line1>,<line2>)
+command! -nargs=? -range=% InputTag :call inputtag#InputTag(<line1>,<line2>)
