@@ -4,7 +4,7 @@
 " License:	This file is placed in the public domain.
 
 function! inputtag#InputTag(first,last) range
-  let d = exists('g:inputtag_delimiter') ? g:inputtag_delimiter : '\t'
+  let d = exists('g:inputtag_delimiter') ? g:inputtag_delimiter : ','
   let s:abbr = 'disabled,autofocus,readonly,required,async'
 
   let s:head = split(getline(a:first),d)
