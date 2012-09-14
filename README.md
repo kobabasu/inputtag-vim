@@ -47,4 +47,4 @@ the line not include at least two delimiter was not converted.
 
 You can change delimiter. add this to your vimrc:
 
-  let g:inputtag_delimiter = '\t'
+    let g:inputtag_delimiter = '\t'
