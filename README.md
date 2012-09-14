@@ -15,7 +15,7 @@ I recommend installing [pathogen.vim](https://github.com/tpope/vim-pathogen), an
 Command
 -----
 
-    :Inputtag
+    :InputTag
 
 Use Case
 -----
