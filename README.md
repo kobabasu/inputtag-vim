@@ -32,7 +32,7 @@ Select these lines in visual mode.
 Select the CSV header as the first line.
 The each fields of the first line turn to be the attributes.
 
-Enter the code as below.
+Enter the command as below.
 
     :InputTag
 
@@ -43,9 +43,9 @@ these lines will convert as followed
     <input type="text" name="zip" size="10" required>
     <input type="text" name="products" size="20">
 
-Empty fields and spaces should be skipped automatically.
-Attribute words such as 'required', 'disabled'... will be inserted as Abbreviations if a word is inserted into end of tag.
-IT won't be converted without 2 or more delimiters.
+* Empty fields and spaces should be skipped automatically.
+* Attribute words such as 'required', 'disabled'... will be inserted as Abbreviations if a word is inserted into end of tag.
+* IT won't be converted without 2 or more delimiters.
 
 You can change delimiter. add this to your vimrc:
 
