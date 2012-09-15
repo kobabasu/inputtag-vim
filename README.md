@@ -1,12 +1,13 @@
 InputTag.vim
 ============
 
-[InputTag-vim](https://github.com/kobabasu/inputtag-vim) vimscript for converting csv, tsv to input tag.
+[InputTag-vim](https://github.com/kobabasu/inputtag-vim) vim script that will convert CSV and TSV data to input tag.
 
 Installation
 ------------
 
-I recommend installing [pathogen.vim](https://github.com/tpope/vim-pathogen), and then simply copy and paste:
+[pathogen.vim](https://github.com/tpope/vim-pathogen) installation is recommended.
+Copy and paste it.
 
     cd ~/.vim/bundle
     git clone git://github.com/kobabasu/inputtag-vim.git
@@ -17,10 +18,10 @@ Command
 
     :InputTag
 
-Use Case
+How to use
 -----
 
-Select lines like this, in visual mode.
+Select these lines in visual mode.
 
     type,name,value,size,required
     text,name,enter your name,30
@@ -28,22 +29,23 @@ Select lines like this, in visual mode.
     text,zip, ,10,true
     text,products,,20
 
-First line must be a header. each fields of first line become to attributes.
+Select the CSV header as the first line.
+The each fields of the first line turn to be the attributes.
 
-then enter
+Enter the code as below.
 
     :InputTag
 
-to change lines to
+these lines will convert as followed
 
     <input type="text" name="name" value="enter your name" size="30">
     your personal data
     <input type="text" name="zip" size="10" required>
     <input type="text" name="products" size="20">
 
-empty fields or include just space fields were ignored.
-attribute can be omitted like 'required', 'disabled', etc... were omitted if fill out field by anyword.
-the line not include at least two delimiter was not converted.
+Empty fields and spaces should be skipped automatically.
+Attribute words such as 'required', 'disabled'... will be inserted as Abbreviations if a word is inserted into end of tag.
+IT won't be converted without 2 or more delimiters.
 
 You can change delimiter. add this to your vimrc:
 
