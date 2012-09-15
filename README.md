@@ -36,7 +36,7 @@ Enter the command as below.
 
     :InputTag
 
-these lines will convert as followed
+these lines will convert as followed.
 
     <input type="text" name="name" value="enter your name" size="30">
     your personal data
