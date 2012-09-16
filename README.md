@@ -58,10 +58,10 @@ You can change delimiter. add this to your vimrc:
 
 Also, you can set a parameter for changing delimiter.
 
-Example: ','
+For ',' delimiter
 
     :InputTag ,
 
-Example: '\t'
+For '\t' delimiter
 
     :InputTag \t
