@@ -3,8 +3,9 @@
 " Maintainer:	Keiji Kobayashi <keiji@seeknetusa.com>
 " License:	This file is placed in the public domain.
 
-function! inputtag#InputTag(first,last) range
-  let d = exists('g:inputtag_delimiter') ? g:inputtag_delimiter : ','
+function! inputtag#InputTag(opt,ft,first,last) range
+  let d = exists('a:opt') ? a:opt : exists('g:inputtag_delimiter') ? g:inputtag_delimiter : ','
+  let s:ft = a:ft
   let s:abbr = 'disabled,autofocus,readonly,required,async'
 
   let s:head = split(getline(a:first),d)
@@ -26,23 +27,23 @@ function! inputtag#InputTag(first,last) range
 endfunction
 
 function! GenerateTag(ln)
-    let tag = '<input '
-    let tail = ' '
-    let i = 0
+  let tag = '<input '
+  let tail = ' '
+  let i = 0
 
-    while i < len(s:head)
-      if exists('a:ln[i]') && a:ln[i] !~ '^$\|^\s\+$'
-        if match(s:abbr,s:head[i]) == -1
-          let tag = tag . s:head[i] . '="' . a:ln[i] . '" '
-        else
-          let tail = tail . s:head[i] . ' '
-        endif
+  while i < len(s:head)
+    if exists('a:ln[i]') && a:ln[i] !~ '^$\|^\s\+$'
+      if match(s:abbr,s:head[i]) == -1
+        let tag = tag . s:head[i] . '="' . a:ln[i] . '" '
+      else
+        let tail = tail . s:head[i] . ' '
       endif
+    endif
 
-      let i = i + 1
-    endwhile
+    let i = i + 1
+  endwhile
 
-    let tail = substitute(tail,' $','','g')
-    let tag = substitute(tag,' $','','g') . tail . '>'
-    return tag
+  let tail = substitute(tail,' $','','g')
+  let tag = substitute(tag,' $','','g') . tail . s:ft
+  return tag
 endfunction
