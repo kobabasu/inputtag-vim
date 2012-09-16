@@ -15,8 +15,13 @@ Copy and paste it.
 
 Command
 -----
+normally
 
     :InputTag
+
+If you want close tags, like this <input />. use the command as below
+
+    :InputTagXs
 
 How to use
 -----
@@ -50,3 +55,13 @@ these lines will convert as followed.
 You can change delimiter. add this to your vimrc:
 
     let g:inputtag_delimiter = '\t'
+
+Also, you can set a parameter for changing delimiter.
+
+Example: ','
+
+    :InputTag ,
+
+Example: '\t'
+
+    :InputTag \t
