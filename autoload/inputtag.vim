@@ -6,7 +6,7 @@
 function! inputtag#InputTag(opt,ft,first,last) range
   let d = exists('a:opt') ? a:opt : exists('g:inputtag_delimiter') ? g:inputtag_delimiter : ','
   let s:ft = a:ft
-  let s:abbr = 'disabled,autofocus,readonly,required,async'
+  let s:abbr = 'checked,disabled,autofocus,readonly,required,async'
 
   let s:head = split(getline(a:first),d)
 
